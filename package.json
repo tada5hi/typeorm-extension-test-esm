@@ -1,0 +1,20 @@
+{
+   "dependencies": {
+      "reflect-metadata": "^0.1.13",
+      "sqlite3": "^5.1.7",
+      "typeorm": "0.3.17"
+   },
+   "type": "module",
+   "devDependencies": {
+      "@types/node": "^20.11.5",
+      "ts-node": "10.9.2",
+      "typeorm-extension": "^3.3.0",
+      "typescript": "5.3.3"
+   },
+   "scripts": {
+      "start": "ts-node-esm src/index.ts",
+      "db:create": "ts-node-esm ./node_modules/typeorm-extension/bin/cli.mjs db:create -r src -d data-source",
+      "db:drop": "ts-node-esm ./node_modules/typeorm-extension/bin/cli.mjs db:drop -r src -d data-source",
+      "seed": "ts-node-esm ./node_modules/typeorm-extension/bin/cli.mjs seed:run"
+   }
+}
