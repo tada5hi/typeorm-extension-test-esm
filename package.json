@@ -8,10 +8,11 @@
    "devDependencies": {
       "@types/node": "^20.11.5",
       "ts-node": "10.9.2",
-      "typeorm-extension": "^3.3.0",
+      "typeorm-extension": "^3.4.0-beta.2",
       "typescript": "5.3.3"
    },
    "scripts": {
+      "build": "tsc",
       "start": "ts-node-esm src/index.ts",
       "db:create": "ts-node-esm ./node_modules/typeorm-extension/bin/cli.mjs db:create -r src -d data-source",
       "db:drop": "ts-node-esm ./node_modules/typeorm-extension/bin/cli.mjs db:drop -r src -d data-source",

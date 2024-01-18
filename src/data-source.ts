@@ -1,4 +1,3 @@
-import "reflect-metadata"
 import {DataSourceOptions, DataSource} from "typeorm"
 import { User } from "./entity/User.js";
 import {SeederOptions} from "typeorm-extension";
@@ -15,4 +14,4 @@ const options : DataSourceOptions & SeederOptions = {
     factories: ['src/database/factories/**/*.{js,ts}']
 }
 
-export const AppDataSource = new DataSource(options);
+export default new DataSource(options);
